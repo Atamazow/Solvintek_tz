@@ -1,30 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./ModalOkno.module.css";
 import CloseIcon from "../../assets/Close_Icon";
-function ModalOkno({ _id, picture, name, email, about }) {
+import { useDispatch } from "react-redux";
+import { reset } from "../../redux/slices/userSlice";
+function ModalOkno({ selectedUser }) {
+  const { age, picture, name, email, about, phone } = selectedUser;
+  const dispatch = useDispatch();
 
-  console.log(name)
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
-  // const handleBackdropClick = (e) => {
-  //   if (e.target === e.currentTarget) {
-  //     closeModal();
-  //   }
-  // };
+  const close = () => dispatch(reset());
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      close();
+    }
+  };
   return (
     <div>
-
-        <div className={style.modal_backdrop} >
-          <div className={style.close} >
-            <CloseIcon/>
+      <div className={style.modal_backdrop} onClick={handleBackdropClick}>
+        <div onClick={close} className={style.close}></div>
+        <div className={style.modal_content}>
+          <div onClick={close} className={style.close}>
+            <CloseIcon />
           </div>
-          <div className={style.modal_content}>
-            <h2>Модальное окно</h2>
-            <p>Содержимое модального окна...</p>
-
+          <div>
+            <img className={style.img_modal} src={picture} alt="" />
+          </div>
+          <div className={style.content_data}>
+            <div className={style.wrapper_text}>
+              <div className={style.text_one}>
+                <div>name: </div>
+                <div>age: </div>
+                <div>email: </div>
+                <div>phone: </div>
+                <div>about: </div>
+              </div>
+              <div className={style.text_two}>
+                <div>{name}</div>
+                <div>{age}</div>
+                <div>{email}</div>
+                <div>{phone}</div>
+                <div>{about}</div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
     </div>
   );
 }

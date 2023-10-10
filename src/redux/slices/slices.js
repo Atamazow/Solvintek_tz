@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const { data } = await axios.get(`https://layout.solvintech.ru/nuxt/api/`);
+  const { data } = await axios.get(`https://layout.solvintech.ru/nuxt/api/` );
   return data;
 });
 

@@ -9,9 +9,10 @@
 .user_block_list {
   width: 380px;
   border-radius: 20px;
-   background-color: white;
+  background-color: white;
   height: 405px;
   box-shadow: rgb(0 0 0 / 8%) 0px 3px 16px;
+  cursor: pointer;
 }
 .user_block {
   margin-top: 30px;
@@ -21,12 +22,102 @@
 .email {
   font-weight: 700;
   font-size: 21px;
-  color:  rgba(189, 189, 189, 1);
-
+  color: rgba(189, 189, 189, 1);
 }
 .image {
   width: 380px;
   border-radius: 20px 20px 0 0;
-   margin: auto;
+  margin: auto;
   height: 244px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(61, 114, 152, 1);
+  width: 520px;
+  cursor: pointer;
+  margin: 40px auto;
+}
+
+.lean_btn {
+  background-color: inherit;
+  color: white;
+  padding: 20px;
+  font-size: 21px;
+  cursor: pointer;
+  border: 0;
+}
+
+@media screen and (max-width: 1290px) {
+  .wrapper {
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    width: 320px;
+    margin: 50px auto;
+  }
+  .user_block_list {
+    width: 350px;
+    border-radius: 20px;
+    background-color: white;
+    height: 355px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 3px 16px;
+    cursor: pointer;
+  }
+  .image {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 700px;
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+  .btn {
+    width: 300px;
+  }
+  .user_block_list {
+    width: 350px;
+    border-radius: 20px;
+    background-color: white;
+    height: 355px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 3px 16px;
+    cursor: pointer;
+  }
+  .image {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    width: 350px;
+  }
+  .user_block_list {
+    width: 350px;
+  }
+  .image {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    padding: 0;
+  }
+  .btn {
+    width: 350px;
+    display: block;
+   }
 }

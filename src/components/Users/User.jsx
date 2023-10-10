@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import style from "./Users.module.css";
 
-function User({ _id, picture, name, email, about }) {
+function User({ _id, picture, name, email, about, onClick }) {
 
     return (
-        <div   className={style.user_block_list}>
+        <div onClick={onClick}  className={style.user_block_list}>
             <div >
                 <img className={style.image} src={picture} alt="" />
             </div>
@@ -14,7 +14,7 @@ function User({ _id, picture, name, email, about }) {
                     <span className={style.email}>email:</span> {email}
                 </div>
             </div>
-         </div>
+        </div>
 
     );
 }
@@ -22,15 +22,3 @@ function User({ _id, picture, name, email, about }) {
 export default User;
 
 
-
-
-// const onClickAdd = () => {
-//   const obj = {
-//     picture,
-//     age,
-//     name,
-//     email,
-//     about,
-//   };
-//   dispatch(addItems(obj));
-// };
