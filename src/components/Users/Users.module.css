@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 1280px;
+  margin: auto;
+}
+
+.user_block_list {
+  width: 380px;
+  border-radius: 20px;
+   background-color: white;
+  height: 405px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 3px 16px;
+}
+.user_block {
+  margin-top: 30px;
+  font-size: 19px;
+  margin-left: 20px;
+}
+.email {
+  font-weight: 700;
+  font-size: 21px;
+  color:  rgba(189, 189, 189, 1);
+
+}
+.image {
+  width: 380px;
+  border-radius: 20px 20px 0 0;
+   margin: auto;
+  height: 244px;
+}
